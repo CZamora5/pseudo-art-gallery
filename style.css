@@ -2,8 +2,11 @@
   --clr-main: 220 67 104;
   --clr-black: 21 20 20;
   --clr-white: 244 240 240;
+  --ff-primary: 'Montserrat', sans-serif;
+  --ff-secondary: 'Playfair Display', serif;
 }
 
+/* Reset */
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -23,4 +26,55 @@ p,
 ul {
   margin: 0;
   padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utility classes */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 25rem) {
+  .container {
+    width: 92%;
+    max-width: 90rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+}
+
+.secondary-font {
+  font-family: var(--ff-secondary);
+}
+
+.fw-300 {
+  font-weight: 600;
+}
+
+.fw-400 {
+  font-weight: 600;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 600;
+}
+
+/* Base styles */
+body,
+button {
+  font-family: var(--ff-primary);
+}
+
+body {
+  background-color: rgb(var(--clr-white));
+  color: rgb(var(--clr-black));
 }
