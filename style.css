@@ -1,0 +1,26 @@
+:root {
+  --clr-main: 220 67 104;
+  --clr-black: 21 20 20;
+  --clr-white: 244 240 240;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
