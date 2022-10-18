@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap"
     rel="stylesheet">
-  <script defer src="./main.js"></script>
+  <script defer type="module" src="./main.js"></script>
 </head>
 
 <body>
@@ -20,39 +20,68 @@
     <nav class="nav container">
       <ul class="nav__list">
         <li class="nav__item active"><a href="#">Home</a></li>
-        <li class="nav__item"><a href="#">Works</a></li>
+        <li class="nav__item"><a href="#work">Works</a></li>
       </ul>
     </nav>
   </header>
-  <main class="container">
-    <section class="home">
-      <div class="home__content">
-        <header class="home__header">
-          <h1 class="home__header__title secondary-font fw-600">Alexandre Cabanel</h1>
-          <span class="home__header__subtitle secondary-font fw-400">1823 - 1889</span>
-        </header>
-        <div class="home__text">
-          <p>
-            Alexandre Cabanel was a French painter. He painted historical, classical and religious subjects in the
-            academic style. He was also well known as a portrait painter.
-          </p>
-          <p>
-            His 1863 painting The Birth of Venus is one of the best-known examples of 19th-century academic painting.
-            The
-            picture was bought by the emperor Napoleon III
-          </p>
+  <main>
+    <section class="home-section container">
+      <div class="home">
+        <div class="home__content">
+          <header class="home__header">
+            <h1 class="home__header__title secondary-font fw-600">Alexandre Cabanel</h1>
+            <span class="home__header__subtitle secondary-font fw-400">1823 - 1889</span>
+          </header>
+          <div class="home__text">
+            <p>
+              Alexandre Cabanel was a French painter. He painted historical, classical and religious subjects in the
+              academic style. He was also well known as a portrait painter.
+            </p>
+            <p>
+              His 1863 painting The Birth of Venus is one of the best-known examples of 19th-century academic painting.
+              The
+              picture was bought by the emperor Napoleon III
+            </p>
+          </div>
+          <button class="home__button">View works</button>
         </div>
-        <button class="home__button">View works</button>
+        <figure class="home__figure">
+          <div class="home__figure__image">
+            <img src="./assets/alexandre-cabanel.jpg" alt="Self-portrait of Alexandre Cabanel">
+          </div>
+          <figcaption class="home__figure__caption">
+            <span class="secondary-font fw-400">Self Portrait</span>
+            <span class="secondary-font fw-400">1852</span>
+          </figcaption>
+        </figure>
       </div>
-      <figure class="home__figure">
-        <div class="home__figure__image">
-          <img src="./assets/alexandre-cabanel.jpg" alt="Self-portrait of Alexandre Cabanel">
+    </section>
+    <section class="work-section" id="work">
+      <div class="work">
+        <header class="container">
+          <h2 class="secondary-font fw-600">Artworks of Alexandre</h2>
+        </header>
+        <div class="work__content">
+          <figure class="work__figure">
+            <img class="work__image" src="./assets/the-birth-of-venus.jpg">
+          </figure>
+          <div class="work__information">
+            <h3 class="work__title">The birth of Venus</h3>
+            <span class="work__year">1863</span>
+            <p>
+              <span class="work__method">Oil on canvas</span> | <span class="work__dimensions">150 cm x 250 cms</span>>
+            </p>
+          </div>
+          <div class="work__buttons">
+            <button class="work__button button-previous">
+              <img src="./assets/chevron-left.svg" alt="Chevron icon pointing to the left">
+            </button>
+            <button class="work__button button-next">
+              <img src="./assets/chevron-right.svg" alt="Chevron icon pointing to the right">
+            </button>
+          </div>
         </div>
-        <figcaption class="home__figure__caption">
-          <span class="secondary-font fw-400">Self Portrait</span>
-          <span class="secondary-font fw-400">1852</span>
-        </figcaption>
-      </figure>
+      </div>
     </section>
   </main>
 </body>

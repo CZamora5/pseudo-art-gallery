@@ -17,6 +17,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -137,11 +138,14 @@ body {
 }
 
 /* Home */
+.home-section {
+  margin-top: 3rem;
+}
+
 .home {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin-top: 3rem;
 }
 
 .home__header__title {
@@ -289,4 +293,9 @@ body {
   .home__figure {
     order: -1;
   }
+}
+
+/* Work */
+.work-section {
+  margin-top: 3rem;
 }
