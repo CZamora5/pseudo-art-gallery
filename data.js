@@ -3,7 +3,7 @@ const paintings = [
     name: 'The birth of Venus',
     year: '1863',
     details: 'Oil on canvas',
-    dimensions: '150 cm x 250 cms',
+    dimensions: '150 x 250 cms',
     image: './assets/the-birth-of-venus.jpg'
   },
   {
@@ -46,7 +46,7 @@ const paintings = [
     year: '1851',
     details: 'Oil on canvas',
     dimensions: '284.5 x 304.8 cms',
-    image: './assets/the-death-of-moses.jpg'
+    image: './assets/death-of-moses.jpeg'
   },
   {
     name: 'Fallen angel',
