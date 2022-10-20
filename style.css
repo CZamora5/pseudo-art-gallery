@@ -4,20 +4,13 @@
   --clr-white: 255 249 251;
   --ff-primary: 'Montserrat', sans-serif;
   --ff-secondary: 'Playfair Display', serif;
-  --fs-xs: 0.75rem;
-  /* 12px */
-  --fs-sm: 0.875rem;
-  /* 14px */
-  --fs-base: 1rem;
-  /* 16px */
-  --fs-lg: 1.125rem;
-  /* 18px */
-  --fs-xl: 1.25rem;
-  /* 20px */
-  --fs-2xl: 1.5rem;
-  /* 24px */
-  --fs-3xl: 1.875rem;
-  /* 30px */
+  --fs-xs: 0.6875rem;
+  --fs-sm: 0.75rem;
+  --fs-base: 0.875rem;
+  --fs-lg: 1rem;
+  --fs-xl: 1.125rem;
+  --fs-2xl: 1.25rem;
+  --fs-3xl: 1.5rem;
 }
 
 /* Reset */
@@ -306,6 +299,7 @@ body {
 /* Work */
 .work {
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .work__header h2 {
@@ -391,6 +385,18 @@ body {
   height: auto;
 }
 
+@media screen and (min-width: 23.5rem) {
+  :root {
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-lg: 1.125rem;
+    --fs-xl: 1.25rem;
+    --fs-2xl: 1.5rem;
+    --fs-3xl: 1.875rem;
+  }
+}
+
 @media screen and (min-width: 48rem) {
   :root {
     --fs-xs: 0.875rem;
@@ -415,10 +421,6 @@ body {
 
   .work__information.container.container--work1 {
     margin: 2rem 0 10rem;
-  }
-
-  .container--work1.work__content__body {
-    width: 80%;
   }
 
   header.container.container--work1 {
