@@ -37,8 +37,7 @@ btnNext.addEventListener('click', () => {
 
 const navLinks = document.querySelectorAll('.nav__item');
 
-function changeActiveLink(evt) {
-  const target = evt.currentTarget;
+function changeActiveLink(target) {
   if (target.classList.contains('active')) {
     return;
   }
@@ -48,5 +47,42 @@ function changeActiveLink(evt) {
 }
 
 navLinks.forEach(link => {
-  link.addEventListener('click', changeActiveLink);
+  link.addEventListener('click', evt => changeActiveLink(evt.currentTarget));
 });
+
+const titles = Array.from(document.querySelectorAll('.section__title'));
+
+document.addEventListener('scroll', () => {
+  const rects = titles.map(title => title.getBoundingClientRect());
+  const height = window.innerHeight;
+
+  let index, prevBottom;
+  for (let i = 0; i < rects.length; i++) {
+    if (!index) {
+      index = titles[i].dataset['linkIndex'];
+      prevBottom = rects[i].bottom;
+      continue;
+    }
+    if (rects[i].height <= rects[i] && rects[i].bottom <= height) {
+      if (prevBottom < 0 || rects[i].bottom < prevBottom) {
+        index = titles[i].dataset['linkIndex'];
+        prevBottom = rects[i].bottom;
+      }
+    }
+  }
+
+  changeActiveLink(navLinks[index]);
+});
+// This works but does not give desired result
+// const observer = new IntersectionObserver((entries, obs) => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       const index = entry.target.dataset['linkIndex'];
+//       changeActiveLink(navLinks[index]);
+//     }
+//   });
+// }, { threshold: 1 });
+
+// titles.forEach(title => {
+//   observer.observe(title);
+// });
